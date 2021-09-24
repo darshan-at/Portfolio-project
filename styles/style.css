@@ -1,0 +1,193 @@
+body{
+    scroll-behavior: none;
+    margin: 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* Top Section */
+
+.logo-bar{
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding: 16px;
+}
+.logo-bar a{
+    font-family: 'Merienda One', cursive;
+    color: black;
+    text-decoration: none;
+}
+.memoji{
+    width: 60px;
+    float: left;
+}
+.nav-icon{
+    font-size: 2.2rem;
+    display: block;
+    float: right;
+    padding: 1px 5px;
+    margin: 0px 5px;
+}
+
+/* Navigation Bar */
+.my-nav{
+    display: inline-block;
+    width: 100%;
+    background-color: black;
+}
+.my-nav p{
+    cursor: pointer;
+    color:white;
+    display: block;
+    float: left;
+    text-decoration: none;   
+    margin:0 1rem;
+    padding: 1rem;
+}
+.my-nav .icon{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .my-nav p{display: none;}
+    .my-nav p.icon {
+      float: right;
+      display: block;
+    }
+    .my-nav.nav-res {position: relative;}
+    .my-nav.nav-res .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .my-nav.nav-res p {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+/* Changing Tabs Section */
+.container{
+    display: none;
+}
+.container.active{
+    display: block;
+    font-family: 'Raleway', sans-serif;
+}
+.tab.active{
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width: 800px) {
+    .container{
+        flex-direction: column;
+    }
+  }
+  /*Home Page Section*/
+.container.home.active{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.left{
+    width: 50%;
+    text-align: left;
+    margin: auto 2rem;
+    line-height: 2;
+    word-spacing: 2px;
+}
+.right{
+    width: 50%;
+}
+.contact-info{
+    font-size: 1.1rem;
+}
+.resume-btn{
+    padding: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    letter-spacing: 2px;
+}
+.resume-btn:hover{
+    color:black;
+    background-color: white;
+}
+.profile-img{
+    width: 80%;
+    border-radius: 20px;
+    height: 100%;
+}
+/*Education Section*/
+.container.edu.active{
+    display: flex;
+    padding: 0 3rem;
+    text-align: left;
+}
+.column{
+    width: 50%;
+    margin-top: 1.5rem;
+}
+.column img{
+    width: 100%;
+    border-radius: 20px;
+    height:500px;
+}
+.card{
+    cursor: pointer;
+    border:1px solid;
+    border-radius: 20px;
+    margin: 1rem 0 1rem 2rem;
+    padding: 1rem;
+}
+.card h1{
+    margin: 0;
+    
+}
+.card h3{
+    margin-bottom: 0;
+}
+.edu-active{
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width:1000px) {
+    .column-0{
+        display: none;
+    }
+    .column{
+        width: 100%;
+    }
+}
+/* Skill Section */
+.row{
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 3rem;
+}
+.skill-card{
+    width: 25%;
+    padding: 0 1.5rem 1rem;
+    
+}
+.skill-header img{
+    width: 40%;
+    height: 40%;
+}
+@media screen and (max-width:670px) {
+    .skill-card{
+        width: 35%;
+    }
+    .skill-card img{
+        width: 70%;
+    }
+}
