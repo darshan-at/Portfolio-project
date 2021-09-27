@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darshan Tripathi</title>
-    <link rel="stylesheet" href="styles/style.css">
-    
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./images/cool.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/9fe2efe7a3.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="curTime()">
    
         <!-- Top Section -->
         <div class="top-bar">
@@ -24,34 +24,37 @@
                     <img src="./images/memoji.png" alt="logo" class="memoji" />
                 </a>
                 <a href="#">DARSHAN</a>
-                <a href="#" class="nav-icon">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/darshan-tripathi-b17426182/" class="nav-icon">
+                    <!-- <i class="fab fa-linkedin"></i> -->
+                    <img src="./images/linkdin.png" class="contact-icon"/>
                 </a>
-                <a href="#" class="nav-icon">
-                    <i class="fab fa-github-square"></i>
+                <a href="https://github.com/darshan-at" class="nav-icon">
+                    <!-- <i class="fab fa-github-square"></i> -->
+                    <img src="./images/github-alt-brands.png" class="contact-icon"/>
                 </a>
             </div>
             <!-- Navigation Bar -->
             <div class="my-nav">
-                <p class="tab " id="home">Home</p>
+                <p class="tab blank" id=""></p>
+                <p class="tab active" id="home">Home</p>
                 <p class="tab " id="edu">Education</p>
-                <p class="tab " id="project">Projects</p>
-                <p class="tab active" id="skill">Skills</p>
-                <p class="tab " id="contact">Contact Me</p>
+                
+                <p class="tab" id="skill">Skills</p>
+                <p class="tab" id="contact">Contact Me</p>
                 <p class="icon" onclick="resNav()">
                     <i class="fa fa-bars"></i>
-                  </p>
+                </p>
             </div>
         </div>
         <!-- Home Page Section -->
-        <div class="container home" id="home-cont">
+        <div class="container home active" id="home-cont">
             
             <div class="right">
                 <a href="https://darshan-at.github.io/Darshan-portfolio/"><img src="./images/profile1.jpeg" alt="my profile" class="profile-img"/></a>
             </div>
             <div class="left">
                 <h1>Let me introduce myself</h1>
-                <h3>Darshan Tripathi</h3>
+                <h2>Darshan Tripathi</h2>
                 <p>
                     Currently pursuing M.Tech CSE from <span><a href="https://iiit.ac.in">IIIT-H(International Institute of Information Technology)</a></span>. I completed my Btech IT from BVM,Gujarat. I am extremely enthusiastic about algorithmic coding and designing.Apart from academics, I like to watch TV series/movies. I am also very fond of reading Hindu spiritual books.
                 </p>
@@ -59,7 +62,11 @@
                     <p><i class="fas fa-at"></i><a href="mailto:darshantripathi909@gmail.com"> darshantripathi909@gmail.com</a></p>
                     <p><i class="fas fa-mobile-alt"></i><a href="tel:+917016935975"> +917016935975 / +919904032167</a></p>
                 </div>
-                <a href="https://drive.google.com/file/d/11ldz7PY3XW5Uy8u1h_kSIN2dVGZjc9wG/view?usp=sharing" class="resume-btn">Download Resume</a>
+                
+                
+                    <a href="https://drive.google.com/file/d/11ldz7PY3XW5Uy8u1h_kSIN2dVGZjc9wG/view?usp=sharing" class="resume-btn">Download Resume</a>
+                    
+                
             </div>
         </div>
         <!-- Education Section -->
@@ -68,7 +75,7 @@
                     <img id="edu-photo" src="./images/pnas.jpg">
                 </div>
                 <div class="column">
-                    <div class="card edu-active" id="pnas" onclick="changeEdu(this)">
+                    <div class="card edu-active" id="pnas" onclick="changeEdu(this)" style="margin-top: 0;">
                         <h1>P N Amersey High School</h1>
                         <h3>10th Std Percentage: 85%</h3>
                         <h3>10th Std Percentage: 85%</h3>
@@ -85,18 +92,14 @@
                     </div>
                 </div>
         </div>
-        <!-- Project Section -->
-        <div class="container" id="project-cont">
-            <div class="left">
-                <h1>Project</h1>
-             </div>   
-        </div>
-        <!-- Skill Section -->
-        <div class="container active skill" id="skill-cont">
+       
+        <!-- Skill & Projects Section -->
+        <div class="container skill" id="skill-cont">
+            <h1>Skills</h1>
             <div class="row">
                 <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/html.png">
+                        <i class="fab fa-html5 skill-icon"></i>
                     </div>
                     <div class="skill-name">
                         <p>HTML</p>
@@ -104,7 +107,7 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/css.png">
+                        <i class="fab fa-css3-alt skill-icon"></i>
                     </div>
                     <div class="skill-name">
                         <p>CSS</p>
@@ -112,7 +115,7 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/javascript.png">
+                        <i class="fab fa-js-square skill-icon"></i>
                     </div>
                     <div class="skill-name">
                         <p>JAVASCRIPT</p>
@@ -120,23 +123,41 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/c.png">
+                        <i class="fab fa-bootstrap skill-icon"></i>
+                    </div>
+                    <div class="skill-name">
+                        <p>BOOTSTRAP</p>
+                    </div>    
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-cuttlefish skill-icon"></i>
+                        
                     </div>
                     <div class="skill-name">
                         <p>C</p>
                     </div>    
                 </div>
-                <div class="skill-card">
+                <!-- <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/c++.png">
+                        <img src="./images/c++.png" class="skill-icon">
                     </div>
                     <div class="skill-name">
                         <p>C++</p>
                     </div>    
-                </div>
+                </div> -->
                 <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/git.png">
+                        <i class="fab fa-python skill-icon"></i>
+                    </div>
+                    <div class="skill-name">
+                        <p>Python</p>
+                    </div>    
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fab fa-git-alt skill-icon"></i>
                     </div>
                     <div class="skill-name">
                         <p>GIT</p>
@@ -144,22 +165,146 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-header">
-                        <img src="./images/sql.png">
+                        <i class="fas fa-database skill-icon"></i>
                     </div>
                     <div class="skill-name">
                         <p>SQL</p>
                     </div>    
                 </div>
-                
              </div>   
+              <!-- Project Section -->
+              <div class="container-project">
+                  <h1>Projects</h1>
+                <div class="project-row">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <video autoplay muted loop>
+                                <source src="./data/portfolio-mp4.mp4" type="video/mp4">
+                                <source src="./data/portfolio-mp4.mp4" type="video/mp4">
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>
+                        <div class="project-description">
+                            <h3>Personal Protfolio</h3>
+                                <ul>
+                                    <li>
+                                        Used HTML,CSS ,Javascript and Bootstrap
+                                    </li>
+                                    <li>
+                                        Responsive(Adapts display size and resolution)
+                                    </li>
+                                    <li>
+                                        Elegant User Experience
+                                    </li>
+                                    <li>
+                                        Special Hover Effects
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <video autoplay muted loop>
+                                <source src="./data/foodie-mp4.mp4" type="video/mp4">
+                                <source src="./data/foodie-mp4.mp4" type="video/mp4">
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>
+                        <div class="project-description">
+                            <h3>Restaurant Website Design</h3>
+                            <ul>
+                                <li>
+                                    Used HTML,CSS,and Bootstrap
+                                </li>
+                                <li>
+                                    Responsive(Adapts display size and resolution)
+                                </li>
+                                <li>
+                                    Clean center-aligned layout
+                                </li>
+                                <li>
+                                    Gateway for your company website and as a landing page
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <video autoplay muted loop>
+                                <source src="./data/tindog-mp4.mp4" type="video/mp4">
+                                <source src="./data/tindog-mp4.mp4" type="video/mp4">
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>
+                        <div class="project-description">
+                            <h3>Dog Matching Template</h3>
+                                <ul>
+                                    <li>
+                                        HTML,CSS, and Bootstrap
+                                    </li>
+                                    <li>
+                                        Responsive(Adapts display size and resolution)
+                                    </li>
+                                    <li>
+                                        Dog Matching just like Tinder
+                                    </li>
+                                    <li>
+                                        Pricing page,Testimonials Page,Contact Page and Download Page.
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container" id="contact-cont">
-            <div class="left">
-                <h1>Cob</h1>
-                <h3>Darshan Tripathi</h3>
+    </div>
+    <div class="container" id="contact-cont">
+            <div class="form">
+                <table>
+                    
+                    <th colspan="2">
+                        Contact Us
+                    </th>
+                    <tr>
+                        <td>
+                            <p>Name:</p>
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Enter your Name*" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Email:</p>
+                        </td>
+                        <td>
+                            <input type="email" placeholder="Enter your Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Your Message:</p>
+                        </td>
+                        <td>
+                            <textarea></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" >
+                            <input type="submit" class="submit" value="Contact">
+                        </td>
+                    </tr>
+                    
+                </table>
+               
                 
-        </div>
-   
-    <script src="scripts/myscript.js"></script>
+    </div>
+    </div>
+    <div class="footer">
+        <p id="date"></p>
+        
+        <p id="time"></p>
+    </div>
+    <script src="./scripts/myscript.js"></script>
 </body>
 </html>
