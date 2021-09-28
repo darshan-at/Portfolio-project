@@ -1,6 +1,5 @@
 
 body{
-    scroll-behavior: none;
     margin: 0;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -15,10 +14,11 @@ a{
     font-size: 2.2rem;
     font-weight: 700;
     padding: 16px;
+    background: #37898C;
 }
 .logo-bar a{
     font-family: 'Merienda One', cursive;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 .memoji{
@@ -28,19 +28,21 @@ a{
 .nav-icon{
     float: right;
     padding: 1px 5px;
-    margin: 0px 5px;
+    margin: 0px 5px; 
 }
 .contact-icon{
     width: 2.5rem;
     border-radius: 50px;
     border: 3px solid;
     padding: 0 2px 2px;
+    background-color: white;
 }
 /* Navigation Bar */
 .my-nav{
     display: inline-block;
     width: 100%;
-    background-color: black;
+    margin-top: 0.3rem;
+    background-color: white;
 }
 .my-nav p{
     cursor: pointer;
@@ -53,19 +55,28 @@ a{
 }
 .my-nav .icon{
     display: none;
+    color:#37898C;
+    font-size: 1.5rem;
 }
 
 /* Changing Tabs Section */
 .container{
     display: none;
+
 }
 .container.active{
     display: block;
     font-family: 'Raleway', sans-serif;
 }
+p.tab{
+	color: #37898C;
+    font-weight: bold;
+}
 .tab.active{
-    background-color: white;
-    color: black;
+    background-color: #C4E9E4;
+    color: #37898C;
+    font-weight: bold;
+    border-radius: 10px;
 }
 @media screen and (max-width: 800px) {
     .container{
@@ -77,7 +88,10 @@ a{
     display: flex;
     justify-content: space-evenly;
     padding: 2rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    background: #37898C; 
+	background: -webkit-linear-gradient(to bottom, #37898C, #C4E9E4);
+	background: linear-gradient(to bottom, #37898C, #C4E9E4);
 }
 
 .left{
@@ -85,31 +99,57 @@ a{
     text-align: left;
     line-height: 2;
     word-spacing: 2px;
+    color: white;
 }
 .left h1{
     margin-top: 0;
-}
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+ }
+.left h2{
+	font-weight: bold;
+    font-size: 30px;
+ }
+ .left p{
+ 	font-weight: 400;
+    font-size: 18px;
+ }
+ .left p span a{
+ 	font-weight: 600;
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+ }
+ .contact-info p a{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    color: white;
+ }
 .right{
     width: 50%;
+    color: white
 }
 .contact-info{
     font-size: 1.1rem;
+    color: white;
 }
 .resume-btn{
     padding: 1rem;
     margin-top: 1.5rem;
     text-decoration: none;
     display: inline-block;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #37898C;
     font-weight: bold;
     border-radius: 30px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .resume-btn:hover{
-    color:black;
+    color: #37898C;
     background-color: white;
-    border:1px solid;
+    border:2px solid #37898C;
 }
 .profile-img{
     width: 70%;
@@ -119,8 +159,11 @@ a{
 /*Education Section*/
 .container.edu.active{
     display: flex;
-    padding: 0 3rem;
+    padding: 2rem 3rem;
     text-align: left;
+    background: #37898C; 
+	background: -webkit-linear-gradient(to bottom, #37898C, #C4E9E4);
+	background: linear-gradient(to bottom, #37898C, #C4E9E4);
 }
 .column{
     width: 50%;
@@ -130,13 +173,16 @@ a{
     width: 100%;
     border-radius: 20px;
     height:500px;
+    border: 3px solid white;
 }
 .card{
     cursor: pointer;
-    border:1px solid;
+    border:2px solid white;
     border-radius: 20px;
     margin: 1rem 0 1rem 2rem;
     padding: 1rem;
+    background-color: white;
+    color: #37898C;
 }
 .card h1{
     margin: 0;
@@ -146,7 +192,7 @@ a{
     margin-bottom: 0;
 }
 .edu-active{
-    background-color: black;
+    background-color: #37898C;
     color: white;
 }
 @media screen and (max-width:1000px) {
@@ -161,8 +207,16 @@ a{
     }
 }
 /* Skill Section */
+.container.skill.active{
+    background: #37898C; 
+	background: -webkit-linear-gradient(to bottom, #37898C, #C4E9E4);
+	background: linear-gradient(to bottom, #37898C, #C4E9E4);
+}
 .skill h1{
+	padding-top: 20px;
     font-size: 3rem;
+    color: white;
+    margin-top: 0;
 }
 .row{
     font-size: 1.2rem;
@@ -173,11 +227,22 @@ a{
 }
 .skill-card{
     width: 25%;
-    padding: 0 1.5rem 1rem;
+    padding: 0 1.5rem 6rem;
+}
+.skill-name{
+	padding-top: 3%;
+}
+.skill-name p{
+	color: #37898C; 
+	margin:0 auto;
+	background-color: white;
+	width: 50%;
+	border-radius: 10px;
+	border: 1px solid white;
 }
 .skill-icon{
     font-size: 10rem;
-    color: #393E46;
+    color: white;
 }
 .project-row{
     width: 100%;
@@ -186,11 +251,11 @@ a{
     justify-content:center;
 }
 .project-card{
-    background-color: #393E46;
-    color: white;
+    background-color: white;
+    color: #37898C;
     margin: auto 2rem;
     border-radius: 20px;
-    border:1px solid black;
+    border: 5px solid white;
     text-align: left;
     line-height: 1.3;
 }
@@ -205,10 +270,17 @@ a{
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    border-bottom: 5px solid #37898C;
    
 }
 
 /*Contact Section*/
+.container.cont-form{
+    background: #37898C; 
+	background: -webkit-linear-gradient(to bottom, #37898C, #C4E9E4);
+	background: linear-gradient(to bottom, #37898C, #C4E9E4);
+	padding-bottom: 2rem;
+}
 .form{
     border: 1px solid;
     font-size: 1.5rem;
@@ -216,19 +288,28 @@ a{
     text-align: center;
     margin-top: 3rem;
     padding-top: 1rem;
+    width: 50%;
     border-radius: 20px;
+    background-color: white;
+}
+table{
+    width: 100%;
 }
 td{
     margin:1rem;
     padding:1rem;
+    color:#37898C; 
 }
 input,textarea{
     font-size: 1.1rem;
     width: 238px;
+    border-radius: 10px;
+    background-color:#C4E9E4; 
 }
 textarea{
     width: 238px;
     height: 150px;
+    color:#37898C; 
 }
 .submit{
     font-weight: 700;
@@ -237,14 +318,17 @@ textarea{
 }
 /* Footer */
 .footer{
-    background-color: black;
-    color: white;
+    background-color: #C4E9E4;
+    color: #37898C;
     padding: 16px 0;
-    margin-top: 32px;
 }
 .footer p{
     display: inline;
-    
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+.empty{
+	padding: 30px;
 }
 @media screen and (max-width:1000px) {
     .project-row{
@@ -253,10 +337,16 @@ textarea{
     .project-card{
         margin: 3rem;
     }
+    .skill-name p{
+        width: 75%;
+    }
 }
 @media screen and (max-width:670px) {
     .skill-card{
         width: auto;
+    }
+    .skill-name p{
+        width: 100%;
     }
 }
 .blank{
@@ -293,5 +383,8 @@ textarea{
   @media screen and (max-width: 500px) {
       .logo-bar{
           font-size: 1.5rem;
+      }
+      .my-nav .icon{
+        padding: 0 0 10px 0;
       }
     }
