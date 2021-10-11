@@ -6,7 +6,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 /* Top Section */
 
@@ -379,6 +379,10 @@ textarea{
     .blank{
         visibility:unset;
     }
+    .form{
+        width: 100%;
+    }
+    
   }
   @media screen and (max-width: 500px) {
       .logo-bar{
@@ -388,3 +392,15 @@ textarea{
         padding: 0 0 10px 0;
       }
     }
+    @media screen and (max-width: 820px) and (min-width: 650px) {
+        input,textarea{
+            width: 150px;
+            font-size: 0.8rem;
+        }
+      }
+      @media screen and (max-width: 650px){
+      input,textarea{
+        font-size: 1.1rem;
+        width: 238px;
+    }
+}
